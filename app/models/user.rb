@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  belongs_to :portfolio
+  has_many :portfolios
 
   validates :name, presence: true
   validates :email, presence: true
