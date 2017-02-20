@@ -1,6 +1,9 @@
 class PortfoliosController < ApplicationController
   def index
-    @portfolios = current_user.portfolios
+    # @portfolios = current_user.portfolios
+    @portfolio = Portfolio.find(4)
+    @bob = @portfolio.stocks.first.current_price
+    binding.pry
   end
 
   def new
@@ -19,6 +22,7 @@ class PortfoliosController < ApplicationController
     find_portfolio
     if authorized?(@portfolio.user_id) && @portfolio.update(portfolio_params)
       redirect_to portfolio_path(@portfolio.id)
+    end
   end
 
   def destroy
