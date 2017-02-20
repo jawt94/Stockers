@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   validates :name, :email, presence: true
   validates :email, uniqueness: true
-  validates :password, length: { minimum: 1 }
+  validates :password, length: { minimum: 6 }
 
   has_secure_password
 end
