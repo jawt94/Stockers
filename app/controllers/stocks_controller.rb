@@ -7,6 +7,7 @@ class StocksController < ApplicationController
 
   def create
     @stock=@portfolio.stocks.new(stock_params)
+      #helper that subtracts amount from portfolio
     if @stock.save
       redirect_to portfolio_path(params[:portfolio_id])
     else
@@ -21,7 +22,7 @@ class StocksController < ApplicationController
 
   def update
     find_stock
-    if authorized?(@stock.portfolio.user_id) && @stock.update()
+    ##TBD!!!!!!
   end
 
   def destroy

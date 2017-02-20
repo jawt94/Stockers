@@ -11,16 +11,27 @@ class PortfoliosController < ApplicationController
     @portfolio = current_user.portfolios.new(portfolio_params)
   end
 
-  def update
+  # def edit
+  #   find_portfolio
+  # end
 
+  def update
+    find_portfolio
+    if authorized?(@portfolio.user_id) && @portfolio.update(portfolio_params)
+      redirect_to portfolio_path(@portfolio.id)
   end
 
   def destroy
-
+    find_portfolio
+    @id = @portfolio.user_id
+    if authorized(@id)
+      @portfolio.destroy
+    end
+    redirect_to user_path(@id)
   end
 
-  def stock_params
-    params.request(:stock).permit(:shares, :purchase_price)
+  def portfolio_params
+    params.request(:portfolio).permit(:name, :cash)
   end
 
 end
