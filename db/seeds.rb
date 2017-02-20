@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+leila = User.create(name: "Leila", email: "l@l.com", password: "a")
+leila.portfolios.create(name:"Equity", cash: 0)
+
+
+andrew = User.create(name: "Andrew", email: "a@a.com", password: "a")
+andrew.portfolios.create(name:"First portfolio", cash: 0)
+
+
+tina = User.create(name: "Tina", email: "t@t.com", password: "a")
+tina.portfolios.create(name:"High Risk", cash: 0)
+bob = tina.portfolios.create(name:"Low Risk", cash: 0)
+
+fb = Company.create(name:"Facebook", ticker:"FB", purchase_price: 133.53, shares: 10, current_price: 133.53)
+
+google = Company.create(name:"Google", ticker:"Googl", purchase_price: 846.55, shares: 10, current_price: 846.55)
+
+ua = Company.create(name:"Under Armour", ticker:"UAA", purchase_price: 21.88, shares: 20, current_price: 21.88)
+
+
+
+bob.stocks.create(company_id: 1)
+bob.stocks.create(company_id: 2)
+bob.stocks.create(company_id: 3)
