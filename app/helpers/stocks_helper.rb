@@ -5,6 +5,6 @@ module StocksHelper
 
   def validate_purchase
     find_portfolio
-    @portfolio.cash>self.value
+    @portfolio.cash>=self.value
   end
 end
