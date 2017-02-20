@@ -1,4 +1,7 @@
 module ApplicationHelper
- include UserHelper
- include SessionHelper
+ include UsersHelper
+ include SessionsHelper
+ include CompaniesHelper
+ include PortfoliosHelper
+ include StocksHelper
 end
