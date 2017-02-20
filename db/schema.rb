@@ -18,10 +18,9 @@ ActiveRecord::Schema.define(version: 20170220161002) do
   create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.string   "ticker"
-    t.integer  "purchase_price"
     t.integer  "current_price"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "portfolios", force: :cascade do |t|
@@ -36,9 +35,10 @@ ActiveRecord::Schema.define(version: 20170220161002) do
   create_table "stocks", force: :cascade do |t|
     t.integer  "company_id"
     t.integer  "portfolio_id"
-    t.integer  "shares",       null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "shares",         null: false
+    t.integer  "purchase_price", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.index ["company_id"], name: "index_stocks_on_company_id", using: :btree
     t.index ["portfolio_id"], name: "index_stocks_on_portfolio_id", using: :btree
   end
