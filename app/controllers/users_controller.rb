@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_id(params[:id])
     @portfolios = @user.portfolios
+    #will show the welcome back tina page
   end
 
   private
