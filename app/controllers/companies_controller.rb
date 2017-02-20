@@ -6,11 +6,9 @@ class CompaniesController < ApplicationController
   def show
     company = new_company("googl")
     if company.save
-      #render whatever json we need to pass back
       render json: company
     else
-      #render an error message
-      "noooo"
+      "That is not a company ticker. Please enter an accurate ticker"
     end
   end
 end
