@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 describe Company do
-  let(:company) {Company.new}
+  let(:fb) {Company.create(name:"Facebook", ticker:"FB", current_price: 133.53)}
 
-  describe "something" do
-    context "When the user does this" do
-      it "does something" do
-        expect(company.method).to eq company.something
+  describe "Company attributes" do
+    context "When the user looks up a company" do
+      it "has a name" do
+        expect(fb.name).to eq "Facebook"
       end
     end
   end

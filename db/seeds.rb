@@ -21,3 +21,5 @@ ua = Company.create(name:"Under Armour", ticker:"UAA", current_price: 21.88)
 bob.stocks.create(company_id: 1, shares: 10, purchase_price: 133.53)
 bob.stocks.create(company_id: 2, shares: 10, purchase_price: 846.55)
 bob.stocks.create(company_id: 3, shares: 10, purchase_price: 21.88)
+
+stock 
