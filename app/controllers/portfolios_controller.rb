@@ -1,8 +1,7 @@
 class PortfoliosController < ApplicationController
   def index
-    binding.pry
-    require_user
-     @portfolios = current_user.portfolio.top_five
+    # require_user
+    portfolio_info
     # @portfolio = Portfolio.find(4)
     # @bob = @portfolio.stocks.first.current_price
   end
