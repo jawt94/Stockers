@@ -13,8 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
-
+//
 var gradients = [
   {id: 'teal', start: '#93d9c5', end: '#1ab086'},
   {id: 'blue', start: '#095a82', end: '#0170a7'},

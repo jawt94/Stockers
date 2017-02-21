@@ -1,43 +1,8 @@
-<div class="container summary">
-  <header>
-    <section class="buy">
-      Google - GOOGL - Current Price: 142.22
-      <form class="" action="index.html" method="post">
-        <input type="text" name="" value="" placeholder="# of shares">
-        <input type="submit" name="" value="Buy">
-      </form>
-    </section>
-    <br>
-    <section class="acc-balance">
-      <h2>Your account balance is: <span>$350,000.00</span></h2>
-    </section>
-  </header>
-  <div class="containerpie">
-  <div id="chart-3" data-pie="piedata3" data-pie-label="Allocation"></div>
-  <div id="chart-2" data-pie="piedata2" data-pie-label="Top Stock Gain"></div>
-  <div id="chart" data-pie="piedata" data-pie-label="Top Stock Loss"></div>
+<%= react_component('Portfolios')%>
+<center>
+<div className="containerpie">
+<div id="chart-3" data-pie="piedata3" data-pie-label="Allocation"></div>
+<div id="chart-2" data-pie="piedata2" data-pie-label="Top Stock Gain"></div>
+<div id="chart" data-pie="piedata" data-pie-label="Top Stock Loss"></div>
 </div>
-
-  <section class="charts-container">
-    <section class="chart margin-right">
-      <!-- <h4>Asset Allocations</h4> -->
-      <section>
-      </section>
-    </section>
-
-    <section class="chart gainers margin-right">
-      <!-- <h4>Top gainers <i class="fa fa-angle-double-up" aria-hidden="true"></i></h4> -->
-      <section>
-      </section>
-    </section>
-
-    <section class="chart losers">
-      <!-- <h4>Top losers <i class="fa fa-angle-double-down" aria-hidden="true"></i></h4> -->
-      <section>
-      </section>
-    </section>
-    <section class="detail-link">
-      <a href="/positions">View your positions</a>
-    </section>
-  </section>
-</div>
+</center>
