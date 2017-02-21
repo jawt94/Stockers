@@ -368,6 +368,16 @@ div.position section.items section.item .loser {
   background-color: red;
 }
 
+#mySidenav {
+  display: inline-block;
+}
+
+.sideBar {
+  z-index:3;
+  width:300px;
+  display: inline-block;
+}
+
 
 /** {*/
 /*  box-sizing: content-box;*/
