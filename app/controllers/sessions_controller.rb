@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def login
-
+    render layout: "homepage"
   end
 
   def create
