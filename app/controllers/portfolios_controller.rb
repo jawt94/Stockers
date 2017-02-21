@@ -1,9 +1,8 @@
 class PortfoliosController < ApplicationController
   def index
     # @portfolios = current_user.portfolios
-    @portfolio = Portfolio.find(4)
-    @bob = @portfolio.stocks.first.current_price
-    binding.pry
+    # @portfolio = Portfolio.find(4)
+    # @bob = @portfolio.stocks.first.current_price
   end
 
   def create
