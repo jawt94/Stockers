@@ -1,9 +1,10 @@
 class PortfoliosController < ApplicationController
   def index
-    # @portfolios = current_user.portfolios
-    @portfolio = Portfolio.find(4)
-    @bob = @portfolio.stocks.first.current_price
     binding.pry
+    require_user
+     @portfolios = current_user.portfolio.top_five
+    # @portfolio = Portfolio.find(4)
+    # @bob = @portfolio.stocks.first.current_price
   end
 
   def create
@@ -32,6 +33,10 @@ class PortfoliosController < ApplicationController
 
   def portfolio_params
     params.request(:portfolio).permit(:name, :cash)
+  end
+
+  def positions
+
   end
 
 end
