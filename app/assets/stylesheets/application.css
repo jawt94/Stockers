@@ -193,20 +193,20 @@ div.summary header h1 {
 }
 
 div.summary header h2 {
-  background-color: #24313c;
-  padding: 65px;
-  color: white;
+  background-color: #FFF;
+  padding: 5px;
+  color: #24313c;
 }
 
 div.summary header h2 span {
   display: block;
   padding-top: 30px;
   font-size: 36px;
-  color: #12f312;
+  color: #1ab086;
 }
 
 div.summary header section.acc-balance {
-  margin: 35px 0px 25px;
+  margin: -50px 0px 25px;
 }
 
 
