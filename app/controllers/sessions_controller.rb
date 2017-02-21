@@ -4,10 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
+    binding.pry
     @user = User.find_by(email: session_params[:email])
     if @user && @user.authenticate(session_params[:password])
       session[:user_id] = @user.id
-      redirect_to '/portfolios'
+      redirect_to portfolios_path
     else
       @errors = ["Invalid email/password"]
       render 'sessions/login'
