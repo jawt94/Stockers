@@ -206,9 +206,12 @@ div.summary header h2 span {
 }
 
 div.summary header section.acc-balance {
-  margin: -50px 0px 25px;
+  margin: -30px 0px 25px;
 }
 
+div.summary header section.buy {
+  margin: -30px 0px 25px;
+}
 
 /* profile charts */
 section.charts-container {
