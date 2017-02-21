@@ -7,7 +7,7 @@ class Signup extends React.Component{
       let csrfToken = $('meta[name=csrf-token]').attr('content')
     return(
     <div>
-    <form className="" action="/sessions/login" method="post">
+    <form className="" action="/users" method="post">
       <div className="form-group name">
       <input type='hidden' name='authenticity_token' value={csrfToken} />
         <input className="form-control" type="text" name="user[name]" placeholder="Name" />
