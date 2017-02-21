@@ -1,82 +1,452 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+/*@media only screen and (max-width: 500px) {
+}*/
+
+/* universal */
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
-#home-button{
-    text-align: left;
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
-.site-title{
-    font-family: "Candara";
-    color: #444;
-    line-height: 54px;
-    text-align: center;
-    margin: 0.5em 0;
-    font-size: 3em;
-    font-weight: 300;
+/* Login/Signup */
+div.landing {
+  padding-top: 200px;
+  width: 500px;
 }
 
-body {
-  background: #fff;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 200;
-    color: #888;
-    text-align: left;
+div.landing header {
+  text-align: center;
+}
+
+div.landing header h1 {
+  font-size: 45px;
+}
+
+div.landing section.form-container {
+  background-color: #24313c;
+}
+
+div.landing .form-container .form-links {
+  color: white;
+}
+
+div.landing .form-container .form-links a {
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  width: 200px;
+  padding: 10px 60px;
+  text-decoration: none;
+}
+
+div.landing .form-container .form-links a.inactive {
+  background-color: #435159;
+}
+
+div.landing .form-container .form-links a.inactive:hover {
+  background-color: #6c777d
+}
+
+div.landing .form-container .form-links a.active {
+  background-color: #1ab086;
+}
+
+div.landing .form-container .form-links a.active:hover {
+  background-color: #0ba174;
+}
+
+div.landing .form-container {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+div.landing .form-container form div.name {
+  width: 200px;
+  display: inline-block;
+}
+
+div.landing .form-container form div.name input {
+  width: 198px;
+}
+
+div.landing .form-container h2 {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+div.landing .form-container input.form-control {
+  width: 400px;
+  margin: 0 auto;
+}
+
+div.landing .form-container button {
+  width: 400px;
+  background-color: #1ab086;
+  border-color: #1ab086;
+  margin: 0 auto;
+}
+
+div.landing .form-container button:hover {
+  background-color: #0ba174;
+}
+
+/* profile page */
+
+div.summary {
+  width: 1300px;
 }
 
 nav {
-  font-size: 15px;
-  background-color: #DEDEDE;
-  text-align: left;
-  padding-right: 50px;
+  padding: 26px 0px;
+}
+
+nav ul {
+  width: 100%;
+}
+
+nav li.brand {
+  float: left;
+  font-size: 25px;
+}
+
+nav li.brand a {
+  color: #444;
+  text-decoration: none;
+}
+
+nav li.brand a:hover {
+  color: black;
+}
+
+nav li form {
+  float: left;
+  position: relative;
+  width: 850px;
+}
+
+nav li form i.fa-search {
+  position: absolute;
+  right: -90px;
+  font-size: 25px;
+  top: 10px;
+}
+
+nav li form input {
+  width: 850px;
   padding: 10px;
+  min-width: 300px;
+  margin: 0px 100px;
 }
 
-nav a {
-  padding: 0 10px;
+nav li {
+  list-style: none;
+  display: inline-block;
 }
-.box {
-  background: white;
-  display: inline;
-  border: 1px solid black;
-  margin-left: 20px;
-  margin-top: 8%;
+
+nav li.sign-out {
+  float: right;
+}
+
+nav li.sign-out a {
+  display: inline-block;
+  padding: 11px;
+  color: white;
+  background-color: #0ba174;
+  text-decoration: none;
+}
+
+nav li.sign-out a:hover {
+  background-color: #1ab086;
+}
+
+
+/* profile header */
+div.summary header {
+  margin: 0 auto;
+  text-align: center;
+  width: 1060px;
+}
+
+div.summary header h1 {
+  margin-top: 0px;
+}
+
+div.summary header h2 {
+  background-color: #24313c;
+  padding: 65px;
+  color: white;
+}
+
+div.summary header h2 span {
+  display: block;
+  padding-top: 30px;
+  font-size: 36px;
+  color: #12f312;
+}
+
+div.summary header section.acc-balance {
+  margin: 35px 0px 25px;
+}
+
+
+/* profile charts */
+section.charts-container {
+  width: 1058px;
+  margin: 0 auto;
+}
+
+section.charts-container h4 {
+  text-align: center;
+  background-color: #151a1f;
+  padding: 15px 0px;
+  color: white;
+}
+
+section.charts-container .chart {
+  display: inline-block;
+  width: 332px;
+}
+
+section.charts-container .margin-right {
+  margin-right: 25px;
+}
+
+section.charts-container .chart img {
+  display: block;
+  margin: 0 auto;
   width: 300px;
-  height: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right:0;
-    z-index: 1000;
-    background: #1f8dd6;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    color: black;
+  text-align: center;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 200;
-  color: #888;
-  text-align: left;
+section.charts-container .chart span {
+  width: 65px;
+  float: right;
+  text-align: center;
 }
 
-.standard-form{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 100px;
-    text-align: left;
-    padding: 10px;
-    border:
-  }
+section.charts-container .gainers span {
+  background-color: green;
+  color: white;
 
-
-label {
-  padding:10px
 }
 
-input {
-  margin:10px
+section.charts-container .losers span {
+  background-color: red;
+  color: white;
 }
+
+section.charts-container .gainers i {
+  color: #18f012;
+}
+
+section.charts-container .losers i {
+  color: red;
+}
+
+section.charts-container .detail-link {
+  text-align: center;
+  height: 50px;
+}
+
+section.charts-container .detail-link a {
+  color: #24313c;
+  line-height: 50px;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+}
+
+section.charts-container .detail-link a:hover {
+  background-color: #d4d4d4;
+  color: white;
+}
+
+/* Positions */
+div.position header h1 {
+  margin-bottom: 20px;
+}
+
+div.position .snapshot {
+  width: 800px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.position .snapshot div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #24313c;
+  padding: 20px;
+  width: 250px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+div.position .snapshot div .gainer {
+  color: #00fc00;
+}
+
+div.position .snapshot div .loser {
+  color: #ff0000;
+}
+
+div.position .snapshot div p:first-child {
+  font-size: 36px;
+}
+
+div.position section.items {
+  margin-top: 30px;
+}
+
+div.position section.items section {
+  background-color: #24313c;
+  color: white;
+  height: 50px;
+}
+
+div.position section.items section span {
+  line-height: 50px;
+  padding: 0px 15px;
+  width: 155px;
+  display: inline-block;
+}
+
+div.position section.items section span.company-data {
+  width: 230px;
+}
+
+div.position section.items section span.ticker-data {
+  width: 80px;
+}
+
+div.position section.items section .center {
+  text-align: center;
+}
+
+div.position section.items section.item {
+  background-color: rgba(36, 49, 60, 0.8);
+  border-top: 1px solid white;
+}
+
+div.position section.items section.item .gainer {
+  background-color: green;
+}
+
+div.position section.items section.item .change {
+  height: 49px;
+  width: 157px;
+}
+
+div.position section.items section.item .loser {
+  background-color: red;
+}
+
+
+/** {*/
+/*  box-sizing: content-box;*/
+/*}*/
+
+/*#home-button{*/
+/*    text-align: left;*/
+/*}*/
+
+/*.site-title{*/
+/*    font-family: "Candara";*/
+/*    color: #444;*/
+/*    line-height: 54px;*/
+/*    text-align: center;*/
+/*    margin: 0.5em 0;*/
+/*    font-size: 3em;*/
+/*    font-weight: 300;*/
+/*}*/
+
+/*body {*/
+/*  background: #fff;*/
+/*    font-family: 'Open Sans', sans-serif;*/
+/*    font-weight: 200;*/
+/*    color: #888;*/
+/*    text-align: left;*/
+/*}*/
+
+/*nav {*/
+/*  font-size: 15px;*/
+/*  background-color: #DEDEDE;*/
+/*  text-align: left;*/
+/*  padding-right: 50px;*/
+/*  padding: 10px;*/
+/*}*/
+
+/*nav a {*/
+/*  padding: 0 10px;*/
+/*}*/
+/*.box {*/
+/*  background: white;*/
+/*  display: inline;*/
+/*  border: 1px solid black;*/
+/*  margin-left: 20px;*/
+/*  margin-top: 8%;*/
+/*  width: 300px;*/
+/*  height: 300px;*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right:0;*/
+/*    z-index: 1000;*/
+/*    background: #1f8dd6;*/
+/*    overflow-y: auto;*/
+/*    -webkit-overflow-scrolling: touch;*/
+/*    color: black;*/
+/*}*/
+
+/*p {*/
+/*  font-family: 'Open Sans', sans-serif;*/
+/*  font-weight: 200;*/
+/*  color: #888;*/
+/*  text-align: left;*/
+/*}*/
+
+/*.standard-form{*/
+/*    display: inline-block;*/
+/*    float: left;*/
+/*    clear: left;*/
+/*    width: 100px;*/
+/*    text-align: left;*/
+/*    padding: 10px;*/
+/*    border:*/
+/*  }*/
+
+
+/*label {*/
+/*  padding:10px*/
+/*}*/
+
+/*input {*/
+/*  margin:10px*/
+/*}*/
+

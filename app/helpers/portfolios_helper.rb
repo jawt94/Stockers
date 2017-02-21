@@ -12,10 +12,15 @@ module PortfoliosHelper
            ticker: stock.ticker,
            current_price: stock.current_price,
            current_value: stock.current_value,
-           purchase_price: stock.purchase_price, 
+           purchase_price: stock.purchase_price,
            cost_basis: stock.cost_basis,
            profit_and_loss: stock.pnl,
            shares: stock.shares }
+  end
+
+  def top_five
+    binding.pry
+    self.stocks 
   end
 
 end
