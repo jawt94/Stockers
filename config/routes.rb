@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  resources :users, only: [:new, :create, :show]
+  # get '/welcome', to: 'welcome#index'
+  resources :users, only: [:new, :create]
   resources :portfolios do
     resources :stocks, only: [ :create, :show, :update, :destroy]
   end
   resources :companies, only: [:index, :show]
-  resources :sessions, only: [:new, :destroy]
+  resources :sessions, only: [:new, :destroy, :create]
 
   get '/sessions/login', to: 'sessions#login', as: 'login'
   post '/sessions/login', to: 'sessions#create'

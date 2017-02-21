@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220161002) do
+ActiveRecord::Schema.define(version: 20170221183126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170220161002) do
   create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.string   "ticker"
-    t.integer  "current_price"
+    t.float    "current_price"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170220161002) do
     t.integer  "company_id"
     t.integer  "portfolio_id"
     t.integer  "shares",         null: false
-    t.integer  "purchase_price", null: false
+    t.float    "purchase_price", null: false
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.index ["company_id"], name: "index_stocks_on_company_id", using: :btree

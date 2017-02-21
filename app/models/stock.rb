@@ -15,10 +15,20 @@ class Stock < ApplicationRecord
   end
 
   def current_value
-    self.current_price*self.shares
+    self.current_price * self.shares
   end
 
   def pnl
     self.current_value - self.cost_basis
   end
+
+  def percent_change
+    total = self.pnl / self.cost_basis
+    total = total * 100
+  end
+
+  def percentage(total_profit)
+    self.pnl / total_profit
+  end
+
 end
