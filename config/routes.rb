@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   resources :companies, only: [:index, :show]
   resources :sessions, only: [:new, :destroy]
-  
+
   get '/sessions/login', to: 'sessions#login', as: 'login'
   post '/sessions/login', to: 'sessions#create'
   get '/sessions/logout', to: 'sessions#destroy', as: "logout"
