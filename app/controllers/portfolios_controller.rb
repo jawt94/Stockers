@@ -32,5 +32,9 @@ class PortfoliosController < ApplicationController
   def portfolio_params
     params.request(:portfolio).permit(:name, :cash)
   end
+  
+  def positions
+
+  end
 
 end
