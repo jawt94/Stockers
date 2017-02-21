@@ -101,7 +101,9 @@ div.landing .form-container input.form-control {
 }
 
 div.landing .form-container button {
-  width: 400px;
+  width: 200px;
+  border-radius: 7px;
+  height: 40px;
   background-color: #1ab086;
   border-color: #1ab086;
   margin: 0 auto;
@@ -449,4 +451,3 @@ div.position section.items section.item .loser {
 /*input {*/
 /*  margin:10px*/
 /*}*/
-

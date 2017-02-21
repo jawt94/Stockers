@@ -1,26 +1,12 @@
 class Login extends React.Component{
   constructor() {
     super();
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    let user_params = {session: {email: this.refs.email.value, password: this.refs.password.value}}
-    $.ajax({
-      url: '/sessions/login',
-      method: 'post',
-      data: user_params
-    }).done(response => {
-      // debugger;
-      console.log(response)
-    })
   }
 
   render() {
     return(
     <div>
-    <form className="" action="" method="post" onSubmit={this.handleSubmit}>
+    <form className="" action="/sessions/login" method="post" >
       <div className="form-group">
         <input className="form-control" type="email" name="user[email]" placeholder="Email Address" ref="email" />
       </div>
