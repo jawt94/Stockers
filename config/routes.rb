@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get '/sessions/logout', to: 'sessions#destroy', as: "logout"
   # root "welcome#index"
   root "sessions#login"
+  get '/signup', to: 'users#new'
   get '/positions', to: 'portfolios#positions'
 end
