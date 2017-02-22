@@ -20,7 +20,7 @@ module PortfoliosHelper
 
   def portfolio_order
     #add crrent user --------------------------------
-    port = Portfolio.find_by_id(16)
+    port = Portfolio.last
     portfolio_order = []
 
     port.stocks.each do |stock|

@@ -1,6 +1,7 @@
 class PortfoliosController < ApplicationController
   def index
     # require_user
+    debugger
     portfolio_info
     # @portfolio = Portfolio.find(4)
     # @bob = @portfolio.stocks.first.current_price
