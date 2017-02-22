@@ -20,13 +20,14 @@ module PortfoliosHelper
 
   def portfolio_order
     #add crrent user --------------------------------
-    port = Portfolio.last
-    portfolio_order = []
 
-    port.stocks.each do |stock|
-        portfolio_order << stock
-    end
-    portfolio_order.sort_by! { |stock| stock.percent_change }
+    port = Portfolio.last
+
+    portfolio_order = []
+      find_portfolio.stocks.each do |stock|
+          portfolio_order << stock
+      end
+      portfolio_order.sort_by! { |stock| stock.percent_change }
   end
 
   def portfolio_top
