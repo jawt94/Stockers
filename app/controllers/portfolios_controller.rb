@@ -1,9 +1,15 @@
 class PortfoliosController < ApplicationController
   def index
-    # require_user
-    portfolio_info
-    # @portfolio = Portfolio.find(4)
-    # @bob = @portfolio.stocks.first.current_price
+    #this will have info to add a portfolio
+  end
+
+  def show
+    require_user
+    if find_portfolio.stocks.length == 0
+      render 'No stocks are available'
+    else
+      render json: portfolio_info
+    end
   end
 
   def create
