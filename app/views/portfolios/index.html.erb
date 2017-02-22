@@ -1,8 +1,86 @@
+<!-- 
 <%= react_component('Portfolios')%>
 <center>
 <div className="containerpie">
 <div id="chart-3" data-pie="piedata3" data-pie-label="Allocation"></div>
 <div id="chart-2" data-pie="piedata2" data-pie-label="Top Stock Gain"></div>
 <div id="chart" data-pie="piedata" data-pie-label="Top Stock Loss"></div>
+ -->
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<%= react_component("sideBar")%>
+
+<div class="container summary">
+  <header>
+    <section>
+      <h1>Welcome back Tina!</h1>
+    </section>
+    <section class="acc-balance">
+      <h2>Your account balance is: <span>$350,000.00</span></h2>
+    </section>
+  </header>
+
+  <section class="charts-container">
+    <section class="chart margin-right">
+      <h4>Asset Allocations</h4>
+      <img src="http://pngimages.net/sites/default/files/pie-chart-png-image-100613.png" alt="" />
+      <section>
+        <ul>
+          <li>Large-cap stocks</li>
+          <li>Mid-cap stocks</li>
+          <li>Small-cap stocks</li>
+          <li>Fixed-income securities</li>
+          <li>Real-estate investment trusts (REITS)</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="chart gainers margin-right">
+      <h4>Top gainers <i class="fa fa-angle-double-up" aria-hidden="true"></i></h4>
+      <img src="http://pngimages.net/sites/default/files/pie-chart-png-image-100613.png" alt="" />
+      <section>
+        <ul>
+          <li>Arista Networks Inc
+            <span>18.91%</span></li>
+          <li>DigitalGlobe Inc
+            <span>14.91%</span></li>
+          <li>SunPower Corporation
+            <span>9.03%</span></li>
+          <li>Unilever N.V. (ADR)
+            <span>7.91%</span></li>
+          <li>Universal Electronics Inc
+            <span>7.66%</span></li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="chart losers">
+      <h4>Top losers <i class="fa fa-angle-double-down" aria-hidden="true"></i></h4>
+      <img src="http://pngimages.net/sites/default/files/pie-chart-png-image-100613.png" alt="" />
+      <section>
+        <ul>
+          <li>Nu Skin Enterprises, Inc.
+            <span>-12.53%</span></li>
+          <li>Yamana Gold Inc. (USA)
+            <span>-9.91%</span></li>
+          <li>Gibraltar Industries Inc
+            <span>-9.03%</span></li>
+          <li>Aaron's, Inc.
+            <span>-8.91%</span>-8.80</li>
+          <li>Hertz Global Holdings, Inc
+            <span>-7.66%</span></li>
+        </ul>
+      </section>
+    </section>
+    <section class="detail-link">
+      <a href="/positions">View your positions</a>
+    </section>
+  </section>
 </div>
 </center>

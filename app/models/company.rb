@@ -1,5 +1,5 @@
 class Company < ApplicationRecord
-  has_many :stocks
+  has_many :stocks, dependent: :destroy
   has_many :portfolios, through: :stocks
   validates :name, :ticker, :current_price, presence: true
 
