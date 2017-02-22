@@ -10,6 +10,7 @@ class PortfoliosController < ApplicationController
     else
       render json: portfolio_info
     end
+
   end
 
   def create

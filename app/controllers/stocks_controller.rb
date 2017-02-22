@@ -1,5 +1,10 @@
 class StocksController < ApplicationController
 
+
+  def recent
+  
+  end
+
   def create
     @stock=@portfolio.stocks.new(stock_params)
       #helper that subtracts amount from portfolio

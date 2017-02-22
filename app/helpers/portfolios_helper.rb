@@ -20,6 +20,9 @@ module PortfoliosHelper
 
   def portfolio_order
     #add crrent user --------------------------------
+
+    port = Portfolio.last
+
     portfolio_order = []
       find_portfolio.stocks.each do |stock|
           portfolio_order << stock
