@@ -8,7 +8,6 @@ class position extends React.Component{
 
   componentWillMount(){
     let stock_info = this.props.stock_info
-    debugger;
     this.setState({
       stock_info: stock_info
     })

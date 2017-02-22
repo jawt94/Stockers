@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   root "sessions#login"
   get '/signup', to: 'users#new'
   get '/positions', to: 'portfolios#positions'
+  get '/stocks/recent', to: 'stocks#recent'
 end
